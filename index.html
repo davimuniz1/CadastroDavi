@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Alunos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+      <div class="header-container">
+        <div class="logo">Davi Muniz</div>
+      </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Cadastro de Alunos</h1>
+        <p>Gerenciador de alunos com persistência de dados via localStorage</p>
+      </div>
+    </section>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+      <!-- SEÇÃO DO FORMULÁRIO -->
+      <section class="form-section">
+        <div class="container">
+          <h2>Adicionar Novo Aluno</h2>
+          <form id="formAluno">
+            <div class="form-group">
+              <label for="nome">Nome do Aluno</label>
+              <input 
+                type="text" 
+                id="nome" 
+                placeholder="Digite o nome completo" 
+                required 
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                placeholder="Digite o email" 
+                required 
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="matricula">Matrícula</label>
+              <input 
+                type="text" 
+                id="matricula" 
+                placeholder="Digite a matrícula" 
+                required 
+              />
+            </div>
+
+            <button type="submit" class="btn-submit">Salvar Aluno</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- SEÇÃO DA LISTA DE ALUNOS -->
+      <section class="list-section">
+        <div class="container">
+          <h2>Alunos Cadastrados</h2>
+          <div id="stats" class="stats">
+            <div class="stat-item">
+              <span class="stat-label">Total de Alunos</span>
+              <span class="stat-number" id="totalAlunos">0</span>
+            </div>
+          </div>
+
+          <div id="listaAlunos" class="alunos-list">
+            <p class="empty-message">Nenhum aluno cadastrado ainda. Adicione um novo aluno acima.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="footer-container">
+        <p class="footer-credit">Copyright © <span id="ano"></span> Davi Muniz. Cadastro de Alunos. Feito com HTML, CSS e JavaScript.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
